@@ -26,13 +26,11 @@ const items = document.querySelectorAll(".item-contenido");
 const overlay = document.querySelector('.overlay');
 items.forEach((item)=>{
     item.addEventListener('click', (evento)=>{
-        console.log(item.innerHTML);
         document.querySelector('.card').innerHTML = item.innerHTML
         document.querySelector('.overlay').classList.remove('ocultar')
     });
 });
 
 overlay.addEventListener('click', (e)=>{
-    
-    e.target.id === 'overlay' || 'cerrar' ? overlay.classList.add('ocultar') : '';
+    e.target.id === 'overlay' || e.target.id === 'cerrar' ? overlay.classList.add('ocultar') : '';
 });
