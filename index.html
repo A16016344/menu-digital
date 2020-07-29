@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/04750a61d2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+
+        </div>
+        <div class="descripcion">
+            Las mejores hamburguesas del planeta
+        </div>
+    </header>
+    <div class="buscador">
+        <input type="text" placeholder="Buscar" id="barra-busqueda">
+    </div>
+    <nav id="categorias">
+        <a href="#" class="activo">Todos</a>
+        <a href="#">Hamburguesas</a>
+        <a href="#">Hot Dogs</a>
+        <a href="#">Bebidas</a>
+        <a href="#">Cerveza</a>
+    </nav>
+    <section class="grid">
+        <div class="item" data-categoria="hamburguesas">
+            <div class="item-contenido">
+                <i class="icono fas fa-hamburger"></i>
+                <span class="nombre">Hamburguesa con queso</span>
+                <span class="precio">$30</span>
+                <span class="etiquetas">vegana, natural, te hace crecer el pene</span>
+                <div class="children">
+                    <p class="descripcion">Deliciosa hamburguesa con queso, por cierto, tiene queso</p>
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="item" data-categoria="hamburguesas">
+            <div class="item-contenido">
+                <i class="icono fas fa-hamburger"></i>
+                <span class="nombre">Hamburguesa con queso</span>
+                <span class="precio">$30</span>
+                <div class="children">
+                    <p class="descripcion">Deliciosa hamburguesa con queso, por cierto, tiene queso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="overlay ocultar" id="overlay">
+        <i class="fas fa-times" id="cerrar"></i>
+        <div class="card">
+            <i class="icono fas fa-hamburger"></i>
+            <span class="nombre">Hamburguesa con queso</span>
+            <span class="precio">$30</span>
+            <span class="descripcion">Deliciosa</span>            
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

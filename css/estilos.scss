@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.grid {
+    max-width: 1000px;
+    margin:auto;
+    position: relative;
+    .item {
+        width: 100%;
+        position: absolute;
+        display:block;
+        padding: 0;
+        background: blue;
+        .item-contenido {
+            padding: 1em;
+            background: burlywood;
+            border-radius: 1em;
+            position: relative;
+            cursor: pointer;
+            margin: 1em 0 0 1em;
+            margin-bottom: 1.5em;
+            .icono {
+                border-radius: 100%;
+                top: -1em;
+                left: -1em;
+                padding: 1em;
+                position: absolute;
+                display: inline-block;
+            }
+            .nombre {
+                padding-left: 1em;
+            }
+            .precio {
+                padding: 1em;
+                position: absolute;
+                bottom: -1.5em;
+                right: 0;
+                background-color: whitesmoke;
+                border-radius: 100%;
+            }
+            .etiquetas {
+                display: block;
+                font-size: .8em;
+                font-weight: bold;
+                font-style: italic;
+                color: rgb(62, 90, 89);
+            }
+            .children {
+                display: none;
+            }
+        }
+    }
+}
+
+.overlay {
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba($color: #000000, $alpha: 0.5);
+    #cerrar {
+        color: white;
+        position: absolute;
+        font-size: 2rem;
+        margin:1rem;
+        top: 0;
+        right: 0;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        padding: 1em;
+        border-radius: 1em;
+        .icono {
+            position: absolute;
+            top: -2rem;
+            padding: 1rem;
+            border-radius: 100%;
+            color: white;
+            font-size: 2rem;
+        }
+        .nombre {
+            padding-top: 1em;
+        }
+        .children {
+            max-height: 50vh;
+            overflow: auto;
+        }
+    }
+}
+
+.activo {
+    font-weight: bold;
+}
+
+.ocultar {
+    display: none !important;
+}
+
+// Fondo de los iconos
+.fa-hamburger {
+    background: chocolate;
+}
