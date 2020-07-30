@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <script src="https://kit.fontawesome.com/04750a61d2.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/estilos.css">
     <title>Document</title>
 </head>
 <body>
     <header class="header">
         <div class="logo">
-
+            <i class="fas fa-rocket"></i> Rocket Burger <i class="fas fa-rocket"></i>
         </div>
         <div class="descripcion">
             Las mejores hamburguesas del planeta
@@ -20,49 +20,124 @@
         <input type="text" placeholder="Buscar" id="barra-busqueda">
     </div>
     <nav id="categorias">
-        <a href="#" class="activo">Todos</a>
-        <a href="#">Hamburguesas</a>
-        <a href="#">Hot Dogs</a>
-        <a href="#">Bebidas</a>
-        <a href="#">Cerveza</a>
+        <a href="#" class="link activo">Todos</a>
+        <a href="#" class="link">Hamburguesas</a>
+        <a href="#" class="link">Hot Dogs</a>
+        <a href="#" class="link">Sandwiches</a>
+        <a href="#" class="link">Complementos</a>
     </nav>
     <section class="grid">
+        <div class="item" data-categoria="">
+            <img class="imagen" src="img/logo.jpeg" alt="logo">
+        </div>
         <div class="item" data-categoria="hamburguesas">
             <div class="item-contenido">
                 <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Hamburguesa con queso</span>
+                <span class="nombre">Rocket burguer</span>
                 <span class="precio">$30</span>
-                <span class="etiquetas">vegana, natural, te hace crecer el pene</span>
-                <div class="children">
-                    <p class="descripcion">Deliciosa hamburguesa con queso, por cierto, tiene queso</p>
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                </div>
+                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Tomate, Cebolla</span>
             </div>
         </div>
         <div class="item" data-categoria="hamburguesas">
             <div class="item-contenido">
                 <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Hamburguesa con queso</span>
+                <span class="nombre">Hamburguesa Hawaiana</span>
+                <span class="precio">$40</span>
+                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Cebolla Caramelizada, Piña</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="hamburguesas">
+            <div class="item-contenido">
+                <i class="icono fas fa-hamburger"></i>
+                <span class="nombre">Hamburguesa BBQ</span>
+                <span class="precio">$40</span>
+                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Aros de Cebolla, Salsa BBQ</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="hamburguesas">
+            <div class="item-contenido">
+                <i class="icono fas fa-hamburger"></i>
+                <span class="nombre">Hamburguesa Búfalo</span>
+                <span class="precio">$40</span>
+                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Tocino, Salsa Búfalo</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="hamburguesas">
+            <div class="item-contenido">
+                <i class="icono fas fa-hamburger"></i>
+                <span class="nombre">Rocket Doble</span>
+                <span class="precio">$40</span>
+                <span class="etiquetas">Doble Carne, Doble Jamón, Doble Queso, Lechuga, Tomate</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="">
+            <img src="img/hamburguesa.jpg" alt="Hamburguesas" class="imagen">
+        </div>
+        <div class="item" data-categoria="hot dogs">
+            <div class="item-contenido">
+                <i class="icono fas fa-hotdog"></i>
+                <span class="nombre">Hot Dog Clasico</span>
+                <span class="precio">$15</span>
+                <span class="etiquetas">Salchicha, Cebolla</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="hot dogs">
+            <div class="item-contenido">
+                <i class="icono fas fa-hotdog"></i>
+                <span class="nombre">Hot Dog Especial</span>
+                <span class="precio">$20</span>
+                <span class="etiquetas">Salchicha, Tocino, Jamón, Queso, Cebolla</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="">
+            <img src="img/hotdog.jpeg" alt="hotdog" class="imagen">
+        </div>
+        <div class="item" data-categoria="sandwiches">
+            <div class="item-contenido">
+                <i class="icono fas fa-bread-slice"></i>
+                <span class="nombre">Sandwich Club</span>
                 <span class="precio">$30</span>
-                <div class="children">
-                    <p class="descripcion">Deliciosa hamburguesa con queso, por cierto, tiene queso</p>
-                </div>
+                <span class="etiquetas">Jamón, Queso, Tocino, Tomate, Lechuga</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="sandwiches">
+            <div class="item-contenido">
+                <i class="icono fas fa-bread-slice"></i>
+                <span class="nombre">Sandwich Italiano</span>
+                <span class="precio">$30</span>
+                <span class="etiquetas">Salsa Italiana, Jamón, Queso, Salami, Pimiento Verde, Cebolla</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="sandwiches">
+            <div class="item-contenido">
+                <i class="icono fas fa-bread-slice"></i>
+                <span class="nombre">Sandwich Grilled Cheese</span>
+                <span class="precio">$30</span>
+                <span class="etiquetas">Queso Gratinado</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="">
+            <img src="img/sandwich.jpg" alt="sandwich" class="imagen">
+        </div>
+        <div class="item" data-categoria="complementos">
+            <div class="item-contenido">
+                <i class="icono fas fa-utensils"></i>
+                <span class="nombre">Ordenes Extra</span>
+                <span class="precio">$40</span>
+                <span class="etiquetas">Papas Gajo, Papas Fritas, Papas Fritas con Queso y Tocino, Aros de Cebolla, Chiles Toreados</span>
             </div>
         </div>
     </section>
     <section class="overlay ocultar" id="overlay">
         <i class="fas fa-times" id="cerrar"></i>
-        <div class="card">
-            <i class="icono fas fa-hamburger"></i>
-            <span class="nombre">Hamburguesa con queso</span>
-            <span class="precio">$30</span>
-            <span class="descripcion">Deliciosa</span>            
-        </div>
+        <div class="card"></div>
+        <a href="tel:9991079005" class="button"><i class="fas fa-phone-alt"></i></a>
     </section>
+    <footer class="footer">
+        <p>Contamos con Servicio a Domicilio</p>
+        <a href="tel:9991079005" class="button"><i class="fas fa-phone-alt"></i> 9991079005</a>
+        <a href="tel:9991065831" class="button"><i class="fas fa-phone-alt"></i> 9991065831</a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js"></script>
     <script src="scripts/main.js"></script>

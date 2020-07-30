@@ -1,49 +1,108 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: url("/img/bg.jpeg");
+}
+
+.header {
+    .logo {
+        font-family: 'Kumar One Outline', cursive;
+        color: white;
+        font-size: 2em;
+        text-align: center;
+        font-weight: bold;
+        img {
+            display: block;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+    .descripcion {
+        color: white;
+        text-align: center;
+    }
+}
+
+.buscador {
+    margin:auto;
+    max-width: 800px;
+    width: 90%;
+    padding: 1em 0;
+    input {
+        width: calc(100% - 2em);
+        line-height: 2em;
+        border-radius: 1em;
+        padding: 0 1em;
+    }
 }
 
 
+#categorias {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .link {
+        display: inline-block;
+        padding: 1em .5em;
+        &:link {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
 .grid {
+    width: 100%;
     max-width: 1000px;
-    margin:auto;
+    margin: auto;
     position: relative;
     .item {
-        width: 100%;
+        width: calc(50% - 20px);
         position: absolute;
         display:block;
-        padding: 0;
-        background: blue;
+        padding: 10px;
+        .imagen {
+            width: 100%;
+            border-radius: 1em;
+        }
         .item-contenido {
             padding: 1em;
-            background: burlywood;
+            background: black;
+            color: whitesmoke;
             border-radius: 1em;
             position: relative;
             cursor: pointer;
-            margin: 1em 0 0 1em;
-            margin-bottom: 1.5em;
+            margin-bottom: 0.5em;
             .icono {
                 border-radius: 100%;
-                top: -1em;
+                top: 0;
                 left: -1em;
                 padding: 1em;
                 position: absolute;
                 display: inline-block;
             }
             .nombre {
-                padding-left: 1em;
+                font-family: 'Lobster Two', cursive;
+                font-weight: bold;
+                display: inline-block;
+                padding-left: 1.5em;
+                padding-bottom: 1em;
             }
             .precio {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
                 padding: 1em;
                 position: absolute;
-                bottom: -1.5em;
+                bottom: -0.5em;
                 right: 0;
-                background-color: whitesmoke;
-                border-radius: 100%;
+                background-color: darkblue;
+                border-radius: 50% 0 / 100% 0;
             }
             .etiquetas {
                 display: block;
@@ -51,6 +110,7 @@ body {
                 font-weight: bold;
                 font-style: italic;
                 color: rgb(62, 90, 89);
+                padding-inline-end: 3em;
             }
             .children {
                 display: none;
@@ -74,11 +134,29 @@ body {
     background: rgba($color: #000000, $alpha: 0.5);
     #cerrar {
         color: white;
-        position: absolute;
+        position: fixed;
         font-size: 2rem;
         margin:1rem;
         top: 0;
         right: 0;
+        cursor: pointer;
+    }
+    .button {
+        position: fixed;
+        font-size: 1.5rem;
+        margin:1rem;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        display: inline-block;
+        background-color: blue;
+        font-family: 'Neucha', cursive;
+        &:link {
+            padding: 0.5em 1em;
+            border-radius: 2em;
+            text-decoration: none;
+            color:white
+        }
     }
     .card {
         position: relative;
@@ -98,10 +176,27 @@ body {
             font-size: 2rem;
         }
         .nombre {
-            padding-top: 1em;
+            display: inline-block;
+            padding: 0.5em 0;
+            font-family: 'Lobster Two', cursive;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .precio {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 1.5em;
+            background: darkblue;
+            border-radius: 0 50% / 0 100%;
+            display: inline-block;
+            padding: 0.5em 1em;
+            color: whitesmoke;
+            position: absolute;
+            right: -0.5em;
+            top: -0.5em;
         }
         .children {
-            max-height: 50vh;
+            max-height: 50%;
             overflow: auto;
         }
     }
@@ -115,7 +210,46 @@ body {
     display: none !important;
 }
 
+.footer {
+    font-family: 'Kumar One Outline', cursive;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+    .button {
+        display: inline-block;
+        background-color: blue;
+        font-family: 'Neucha', cursive;
+        &:link {
+            padding: 0.5em 1em;
+            border-radius: 2em;
+            text-decoration: none;
+            color:white
+        }
+    }
+}
+
 // Fondo de los iconos
 .fa-hamburger {
     background: chocolate;
+}
+
+.fa-hotdog {
+    background: red;
+}
+
+.fa-bread-slice {
+    background: sandybrown;
+}
+
+.fa-utensils {
+    background: skyblue;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        .item {
+            width: 100%;
+        }
+    }
 }

@@ -1,39 +1,102 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background: url("/img/bg.jpeg");
+}
+
+.header .logo {
+  font-family: 'Kumar One Outline', cursive;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.header .logo img {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+.header .descripcion {
+  color: white;
+  text-align: center;
+}
+
+.buscador {
+  margin: auto;
+  max-width: 800px;
+  width: 90%;
+  padding: 1em 0;
+}
+
+.buscador input {
+  width: calc(100% - 2em);
+  line-height: 2em;
+  border-radius: 1em;
+  padding: 0 1em;
+}
+
+#categorias {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#categorias .link {
+  display: inline-block;
+  padding: 1em .5em;
+}
+
+#categorias .link:link {
+  color: white;
+  text-decoration: none;
 }
 
 .grid {
+  width: 100%;
   max-width: 1000px;
   margin: auto;
   position: relative;
 }
 
 .grid .item {
-  width: 100%;
+  width: calc(50% - 20px);
   position: absolute;
   display: block;
-  padding: 0;
-  background: blue;
+  padding: 10px;
+}
+
+.grid .item .imagen {
+  width: 100%;
+  border-radius: 1em;
 }
 
 .grid .item .item-contenido {
   padding: 1em;
-  background: burlywood;
+  background: black;
+  color: whitesmoke;
   border-radius: 1em;
   position: relative;
   cursor: pointer;
-  margin: 1em 0 0 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .grid .item .item-contenido .icono {
   border-radius: 100%;
-  top: -1em;
+  top: 0;
   left: -1em;
   padding: 1em;
   position: absolute;
@@ -41,16 +104,22 @@ body {
 }
 
 .grid .item .item-contenido .nombre {
-  padding-left: 1em;
+  font-family: 'Lobster Two', cursive;
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 1.5em;
+  padding-bottom: 1em;
 }
 
 .grid .item .item-contenido .precio {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
   padding: 1em;
   position: absolute;
-  bottom: -1.5em;
+  bottom: -0.5em;
   right: 0;
-  background-color: whitesmoke;
-  border-radius: 100%;
+  background-color: darkblue;
+  border-radius: 50% 0 / 100% 0;
 }
 
 .grid .item .item-contenido .etiquetas {
@@ -59,6 +128,8 @@ body {
   font-weight: bold;
   font-style: italic;
   color: #3e5a59;
+  -webkit-padding-end: 3em;
+          padding-inline-end: 3em;
 }
 
 .grid .item .item-contenido .children {
@@ -91,11 +162,31 @@ body {
 
 .overlay #cerrar {
   color: white;
-  position: absolute;
+  position: fixed;
   font-size: 2rem;
   margin: 1rem;
   top: 0;
   right: 0;
+  cursor: pointer;
+}
+
+.overlay .button {
+  position: fixed;
+  font-size: 1.5rem;
+  margin: 1rem;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  display: inline-block;
+  background-color: blue;
+  font-family: 'Neucha', cursive;
+}
+
+.overlay .button:link {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: white;
 }
 
 .overlay .card {
@@ -128,11 +219,29 @@ body {
 }
 
 .overlay .card .nombre {
-  padding-top: 1em;
+  display: inline-block;
+  padding: 0.5em 0;
+  font-family: 'Lobster Two', cursive;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.overlay .card .precio {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.5em;
+  background: darkblue;
+  border-radius: 0 50% / 0 100%;
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: whitesmoke;
+  position: absolute;
+  right: -0.5em;
+  top: -0.5em;
 }
 
 .overlay .card .children {
-  max-height: 50vh;
+  max-height: 50%;
   overflow: auto;
 }
 
@@ -144,7 +253,46 @@ body {
   display: none !important;
 }
 
+.footer {
+  font-family: 'Kumar One Outline', cursive;
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+}
+
+.footer .button {
+  display: inline-block;
+  background-color: blue;
+  font-family: 'Neucha', cursive;
+}
+
+.footer .button:link {
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  text-decoration: none;
+  color: white;
+}
+
 .fa-hamburger {
   background: chocolate;
+}
+
+.fa-hotdog {
+  background: red;
+}
+
+.fa-bread-slice {
+  background: sandybrown;
+}
+
+.fa-utensils {
+  background: skyblue;
+}
+
+@media (max-width: 600px) {
+  .grid .item {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=estilos.css.map */
