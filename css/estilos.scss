@@ -34,7 +34,7 @@ body {
     width: 90%;
     padding: 1em 0;
     input {
-        width: calc(100% - 2em);
+        width: 100%;
         line-height: 2em;
         border-radius: 1em;
         padding: 0 1em;
@@ -63,7 +63,7 @@ body {
     margin: auto;
     position: relative;
     .item {
-        width: calc(50% - 20px);
+        width: 50%;
         position: absolute;
         display:block;
         padding: 10px;
@@ -79,6 +79,7 @@ body {
             position: relative;
             cursor: pointer;
             margin-bottom: 0.5em;
+            margin-left: 1em;
             .icono {
                 border-radius: 100%;
                 top: 0;
@@ -166,6 +167,7 @@ body {
         justify-content: center;
         background: white;
         padding: 1em;
+        margin: 1em;
         border-radius: 1em;
         .icono {
             position: absolute;
@@ -194,6 +196,9 @@ body {
             position: absolute;
             right: -0.5em;
             top: -0.5em;
+        }
+        .etiquetas{
+            text-align: center;
         }
         .children {
             max-height: 50%;
