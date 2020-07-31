@@ -3,17 +3,33 @@
 <head>
     <script src="https://kit.fontawesome.com/04750a61d2.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="css/estilos.css">
-    <title>Rocket Burger</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pizzeria.css">
+    <title>Gerry's Pizza</title>
+
+        <!-- TODO add manifest here -->
+  <link rel="manifest" href="manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Gerry's Pizza">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
 </head>
 <body>
     <header class="header">
+        <div class="button">
+           <p><a href="registro.html">Modificar datos de envio</a></p>            
+        </div>
         <div class="logo">
-            <i class="fas fa-rocket"></i> Rocket Burger <i class="fas fa-rocket"></i>
+            <img src="img/logo.png" alt="Gerry's Pizza">
         </div>
         <div class="descripcion">
-            Las mejores hamburguesas del planeta
+            <p>Lunes a viernes de 3:00pm a 9:30pm</p>
+            <p>Sábado y domingo de 12:00pm a 9:30pm</p>
         </div>
     </header>
     <div class="buscador">
@@ -21,122 +37,193 @@
     </div>
     <nav id="categorias">
         <a href="#" class="link activo">Todos</a>
-        <a href="#" class="link">Hamburguesas</a>
-        <a href="#" class="link">Hot Dogs</a>
-        <a href="#" class="link">Sandwiches</a>
-        <a href="#" class="link">Complementos</a>
+        <a href="#" class="link">Promociones</a>
+        <a href="#" class="link">Paquetes</a>
     </nav>
     <section class="grid">
         <div class="item" data-categoria="">
-            <img class="imagen" src="img/logo.jpeg" alt="logo">
-        </div>
-        <div class="item" data-categoria="hamburguesas">
-            <div class="item-contenido">
-                <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Rocket burguer</span>
-                <span class="precio">$30</span>
-                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Tomate, Cebolla</span>
+            <div class="item-contenido img-promo">
+                 <img src="img/aviso-covid.jpeg" alt="imagen" class="imagen">
             </div>
         </div>
-        <div class="item" data-categoria="hamburguesas">
-            <div class="item-contenido">
-                <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Hamburguesa Hawaiana</span>
-                <span class="precio">$40</span>
-                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Cebolla Caramelizada, Piña</span>
+        <div class="item" data-categoria="promociones">
+            <div class="item-contenido img-promo">
+                 <img src="img/promocion.jpeg" alt="imagen" class="imagen">
+                 <span class="ocultar">
+                    Promo $230 (3 pizzas de 1 ingrediente) _Ingrediente:_
+                 </span>
             </div>
         </div>
-        <div class="item" data-categoria="hamburguesas">
-            <div class="item-contenido">
-                <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Hamburguesa BBQ</span>
-                <span class="precio">$40</span>
-                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Aros de Cebolla, Salsa BBQ</span>
+        <div class="item" data-categoria="promociones">
+            <div class="item-contenido img-promo">
+                 <img src="img/promocion2.jpeg" alt="imagen" class="imagen">
+                 <span class="ocultar">
+                    Promo $160 (2 pizzas de 1 ingrediente) _Ingrediente:_
+                 </span>
             </div>
         </div>
-        <div class="item" data-categoria="hamburguesas">
-            <div class="item-contenido">
-                <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Hamburguesa Búfalo</span>
-                <span class="precio">$40</span>
-                <span class="etiquetas">Carne, Jamón, Queso, Lechuga, Tocino, Salsa Búfalo</span>
+        <div class="item" data-categoria="promociones">
+            <div class="item-contenido img-promo">
+                 <img src="img/promocion3.jpeg" alt="imagen" class="imagen">
+                 <span class="ocultar">
+                    Promo $125 (1 pizza de 4 ingrediente) _Ingredientes:_
+                 </span>
             </div>
         </div>
-        <div class="item" data-categoria="hamburguesas">
-            <div class="item-contenido">
-                <i class="icono fas fa-hamburger"></i>
-                <span class="nombre">Rocket Doble</span>
-                <span class="precio">$40</span>
-                <span class="etiquetas">Doble Carne, Doble Jamón, Doble Queso, Lechuga, Tomate</span>
+        <div class="item" data-categoria="promociones">
+            <div class="item-contenido img-promo">
+                 <img src="img/promocion4.jpeg" alt="imagen" class="imagen">
+                 <span class="ocultar">
+                    Promo $155 (Pizza Nicoleta)
+                 </span>
             </div>
         </div>
-        <div class="item" data-categoria="">
-            <img src="img/hamburguesa.jpg" alt="Hamburguesas" class="imagen">
-        </div>
-        <div class="item" data-categoria="hot dogs">
-            <div class="item-contenido">
-                <i class="icono fas fa-hotdog"></i>
-                <span class="nombre">Hot Dog Clasico</span>
-                <span class="precio">$15</span>
-                <span class="etiquetas">Salchicha, Cebolla</span>
+        <div class="item" data-categoria="promociones">
+            <div class="item-contenido img-promo">
+                 <img src="img/promocion5.jpeg" alt="imagen" class="imagen">
             </div>
         </div>
-        <div class="item" data-categoria="hot dogs">
+        <div class="item" data-categoria="paquetes">
             <div class="item-contenido">
-                <i class="icono fas fa-hotdog"></i>
-                <span class="nombre">Hot Dog Especial</span>
-                <span class="precio">$20</span>
-                <span class="etiquetas">Salchicha, Tocino, Jamón, Queso, Cebolla</span>
+                <span class="paquete">1</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Hawaiana</span>
+                <span class="precio">$115</span>
+                <div class="children">
+                    <span class="ingredientes">Jamón, Piña</span>
+                </div>
             </div>
         </div>
-        <div class="item" data-categoria="">
-            <img src="img/hotdog.jpeg" alt="hotdog" class="imagen">
-        </div>
-        <div class="item" data-categoria="sandwiches">
+        <div class="item" data-categoria="paquetes">
             <div class="item-contenido">
-                <i class="icono fas fa-bread-slice"></i>
-                <span class="nombre">Sandwich Club</span>
-                <span class="precio">$30</span>
-                <span class="etiquetas">Jamón, Queso, Tocino, Tomate, Lechuga</span>
+                <span class="paquete">2</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">3 ingredientes</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
+                <span class="precio">$120</span>
             </div>
         </div>
-        <div class="item" data-categoria="sandwiches">
+        <div class="item" data-categoria="paquetes">
             <div class="item-contenido">
-                <i class="icono fas fa-bread-slice"></i>
-                <span class="nombre">Sandwich Italiano</span>
-                <span class="precio">$30</span>
-                <span class="etiquetas">Salsa Italiana, Jamón, Queso, Salami, Pimiento Verde, Cebolla</span>
+                <span class="paquete">3</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Mambo</span>
+                <span class="ingredientes">Queso, Jamón, Tocino, Salchicha, Champiñon, Cebolla, Pimiento</span>
+                <span class="precio">$150</span>
             </div>
         </div>
-        <div class="item" data-categoria="sandwiches">
+        <div class="item" data-categoria="paquetes">
             <div class="item-contenido">
-                <i class="icono fas fa-bread-slice"></i>
-                <span class="nombre">Sandwich Grilled Cheese</span>
-                <span class="precio">$30</span>
-                <span class="etiquetas">Queso Gratinado</span>
+                <span class="paquete">4</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Nicoleta</span>
+                <span class="ingredientes">Queso, Jamón, Salchicha para asar, Tocino, Peperoni, Champiñon, Cebolla, Pimiento</span>
+                <span class="precio">$155</span>
             </div>
         </div>
-        <div class="item" data-categoria="">
-            <img src="img/sandwich.jpg" alt="sandwich" class="imagen">
-        </div>
-        <div class="item" data-categoria="complementos">
+        <div class="item" data-categoria="paquetes">
             <div class="item-contenido">
-                <i class="icono fas fa-utensils"></i>
-                <span class="nombre">Ordenes Extra</span>
-                <span class="precio">$40</span>
-                <span class="etiquetas">Papas Gajo, Papas Fritas, Papas Fritas con Queso y Tocino, Aros de Cebolla, Chiles Toreados</span>
+                <span class="paquete">5</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Philadelphia</span>
+                <span class="ingredientes">Jamón, Queso, Champiñon, Pierna, Queso Philadelphia, Pimiento, Jalapeño, Piña</span>
+                <span class="precio">$165</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">6</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Super Gerry's</span>
+                <span class="ingredientes">Queso, Pierna, Jamón, Tocino, Champiñon, Cebolla, Pimiento</span>
+                <span class="precio">$165</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">7</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Mexicanisima</span>
+                <span class="ingredientes">Frijol, Jamón, Pierna, Tocino, Jalapeño, Cebolla, Pimiento</span>
+                <span class="precio">$160</span>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">8</span>
+                <span class="tamano">2 Pizzas Grandes</span>
+                <span class="nombre">2 Ingredientes</span>
+                <span class="precio">$195</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">9</span>
+                <span class="tamano">2 Pizzas Grandes</span>
+                <span class="nombre">1 Ingrediente</span>
+                <span class="precio">$170</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">10</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">4 Ingredientes</span>
+                <span class="precio">$125</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">11</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Pierna</span>
+                <span class="ingredientes">+2 ingredientes</span>
+                <span class="precio">$145</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
+            </div>
+        </div>
+        <div class="item" data-categoria="paquetes">
+            <div class="item-contenido">
+                <span class="paquete">12</span>
+                <span class="tamano">Pizza Grande</span>
+                <span class="nombre">Pastor</span>
+                <span class="ingredientes">+2 ingredientes</span>
+                <span class="precio">$155</span>
+                <div class="children">
+                    <span class="h2">Ingredientes a escoger:</span>
+                    <span class="ingredientes">Jamón, Peperoni, Salchicha, Salami, Cebolla, Piña, Champiñon, Aceitunas negras, Salchicha para asar, Pimiento, Frijol, Chorizo, Tocino, Tomate fresco</span>
+                </div>
             </div>
         </div>
     </section>
     <section class="overlay ocultar" id="overlay">
         <i class="fas fa-times" id="cerrar"></i>
         <div class="card"></div>
-        <a href="tel:9991079005" class="button"><i class="fas fa-phone-alt"></i></a>
+        <div class="aviso">Todas nuestras pizzas llevan refresco de 1.5 litros y pan con ajo.</div>
+        <a href="https://wa.me/529993639814" class="button" id="pedir"><i class="fab fa-whatsapp"></i></a>
     </section>
     <footer class="footer">
         <p>Contamos con Servicio a Domicilio</p>
-        <a href="tel:9991079005" class="button"><i class="fas fa-phone-alt"></i> 9991079005</a>
-        <a href="tel:9991065831" class="button"><i class="fas fa-phone-alt"></i> 9991065831</a>
+        <a href="tel:66888518" class="button"><i class="fas fa-phone-alt"></i> 6688 8518</a>
+        <a href="tel:66888519" class="button"><i class="fas fa-phone-alt"></i> 6688 8519</a>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/web-animations-js@2.3.2/web-animations.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/muuri@0.9.0/dist/muuri.min.js"></script>

@@ -5,10 +5,29 @@
           box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: Arial, Helvetica, sans-serif;
   background: url("https://a16016344.github.io/menu-digital/img/bg.jpeg");
   background-attachment: fixed;
+}
+
+.header .button {
+  background-color: white;
+  display: inline-block;
+  margin: .5em;
+  padding: .5em 1em;
+}
+
+.header .button a {
+  color: black;
+}
+
+.header .button a:link {
+  color: black;
+}
+
+.header .button a:visited {
+  color: black;
 }
 
 .header .logo {
@@ -17,12 +36,21 @@ body {
   font-size: 2em;
   text-align: center;
   font-weight: bold;
+  max-width: 200px;
+  margin: auto;
 }
 
 .header .logo img {
-  display: block;
+  display: inline-block;
   max-width: 100%;
   margin: auto;
+  border-radius: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.header .logo img:hover {
+  border-radius: 1em;
 }
 
 .header .descripcion {
@@ -62,6 +90,11 @@ body {
 }
 
 #categorias .link:link {
+  color: white;
+  text-decoration: none;
+}
+
+#categorias .link:visited {
   color: white;
   text-decoration: none;
 }
@@ -230,14 +263,14 @@ body {
   left: 0;
   margin: 1em;
   max-width: 60%;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
 }
 
 .overlay .card {
   min-width: 300px;
   width: 800px;
   max-width: calc(100% - 2em);
-  max-height: calc(100% - 6em);
+  max-height: calc(100vh - 6em);
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -255,6 +288,7 @@ body {
   background: white;
   padding: 1em;
   margin: 1em;
+  margin-bottom: 2em;
   border-radius: 1em;
 }
 
@@ -355,6 +389,24 @@ body {
   border-radius: 2em;
   text-decoration: none;
   color: white;
+}
+
+.hoja-registro {
+  max-width: 90%;
+  width: 800px;
+  margin: auto;
+}
+
+.hoja-registro fieldset {
+  color: white;
+  margin: 1em 0;
+}
+
+.hoja-registro input {
+  width: calc(100% - 1em);
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  margin: 0.5em;
 }
 
 .fa-hamburger {
