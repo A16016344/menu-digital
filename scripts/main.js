@@ -7,6 +7,14 @@ const grid = new Muuri('.grid', {
 var nombre = recuperarInfo("nombre")
 var direccion = recuperarInfo("direccion_completa")
 
+nombre === "" ? (document.querySelector(".registro").style.position = "fixed", document.querySelector(".enlace-registro").innerText = "Registrar datos de envio"): '';
+
+window.onload = function(){
+    console.log(`Se ha cargado la pagina`);
+    grid.filter(`[data-categoria="cargando"]`);
+    grid.filter(`[data-categoria]`)
+};
+
 const categorias = document.querySelectorAll("#categorias a");
 categorias.forEach((categoria) => {
     categoria.addEventListener('click', (opcion) => {
